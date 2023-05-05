@@ -17,6 +17,11 @@ public class BaseTest {
 	public Properties prop;
 	public HomePage homePage;
 
+	/**
+	 * Initialize the setup before running the test
+	 * @param browser
+	 * @param testName
+	 */
 	@Parameters({"browser","testname"})
 	@BeforeTest
 	public void setUp(String browser, String testName) {
@@ -30,7 +35,10 @@ public class BaseTest {
 		driver = df.initDriver(prop);
 		homePage = new HomePage(driver);
 	}
-
+	
+	/**
+	 * Close browser once test is complete
+	 */
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
