@@ -15,7 +15,12 @@ public class ScreenShotUtil {
 	public ScreenShotUtil(WebDriver driver) {
 		this.driver = driver;
 	}
-
+	
+	/**
+	 * Takes screenshot
+	 * @param browserName - to append the browser name to file name
+	 * @return true if screenshot is taken and saved, false otherwise
+	 */
 	public boolean takeScreenshot(String browserName) {
 		boolean screenshotTaken = false;
 

@@ -6,7 +6,13 @@ import java.io.IOException;
 import java.util.List;
 
 public class FileUtil {
-
+	
+	/**
+	 * Add first and last index of list of price in a text file
+	 * @param priceList - list of prices
+	 * @param browserName - to append the browser name to file name
+	 * @return true if prices are written to file, false otherwise
+	 */
 	public boolean addFirstAndLastIndexInTextFile(List<String> priceList, String browserName) {
 		boolean fileWriteSuccessful = false;
 		try {

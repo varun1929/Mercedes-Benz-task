@@ -14,6 +14,10 @@ public class OverviewPage {
 		javaScriptUtil = new JavaScriptUtil(driver);
 	}
 
+	/**
+	 * Car overview page interactions
+	 * @return true if interactions happened correctly, false otherwise
+	 */
 	public boolean clickOnBuildYourCar() {
 		return javaScriptUtil.waitAndClickShadowDomElementByJS(btn_BuildYourCar,1);
 	}

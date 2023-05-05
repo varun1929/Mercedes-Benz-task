@@ -17,6 +17,10 @@ public class HomePage {
 		javaScriptUtil = new JavaScriptUtil(driver);
 	}
 
+	/**
+	 * Home page interactions
+	 * @return true if interactions happened correctly, false otherwise
+	 */
 	public boolean landOnHatchbacksAClassPage() {
 		javaScriptUtil.waitAndClickShadowDomElementByJS(acceptCookies, 4);
 		javaScriptUtil.clickShadowDomElementByJS(headerMenu_OurModels);

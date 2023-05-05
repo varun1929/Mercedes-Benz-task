@@ -15,6 +15,12 @@ public class JavaScriptUtil {
 		this.driver = driver;
 	}
 
+	/**
+	 * Wait for specific time and click on the element
+	 * @param jsElement - javaScript element locator
+	 * @param timeOut - time to wait
+	 * @return true if click is successful, false otherwise
+	 */
 	public boolean waitAndClickShadowDomElementByJS(String jsElement, int timeOut) {
 		boolean isElementClicked = false;
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -28,7 +34,11 @@ public class JavaScriptUtil {
 		isElementClicked = true;
 		return isElementClicked;
 	}
-	
+	/**
+	 * click on the element
+	 * @param jsElement - javaScript element locator
+	 * @return true if click is successful, false otherwise
+	 */
 	public boolean clickShadowDomElementByJS(String jsElement) {
 		boolean isElementClicked = false;
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -38,6 +48,12 @@ public class JavaScriptUtil {
 		return isElementClicked;
 	}
 
+	/**
+	 * Wait and scroll to the element before clicking on the element
+	 * @param jsElement - javaScript element locator
+	 * @param timeOut - time to wait
+	 * @return true if click is successful, false otherwise
+	 */
 	public boolean scrollToClickShadowDomElementByJS(String jsElement, int timeOut) {
 		boolean isElementClicked = false;
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -53,6 +69,11 @@ public class JavaScriptUtil {
 		return isElementClicked;
 	}
 
+	/**
+	 * Double click on an element
+	 * @param jsElement - javaScript element locator
+	 * @return true if double click is successful, false otherwise
+	 */
 	public boolean doubleClickByJS(String jsElement) {
 		boolean isElementClicked = false;
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -63,6 +84,12 @@ public class JavaScriptUtil {
 		return isElementClicked;
 	}
 	
+	/**
+	 * Get text from the list of element
+	 * @param jsElement - javaScript element locator to common element
+	 * @param jsElementPrice - javaScript element locator to specific element
+	 * @return List of string
+	 */
 	public List<String> getElementText(String jsElement, String jsElementPrice) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		long length = getLengthOfElements(jsElement);
@@ -74,6 +101,11 @@ public class JavaScriptUtil {
 		return allPrices;
 	}
 
+	/**
+	 * To get the length of elements 
+	 * @param jsElement - javaScript element locator
+	 * @return length as integer
+	 */
 	public long getLengthOfElements(String jsElement) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		long lengthOfElements = (long) js.executeScript("return " + jsElement + ".length");
