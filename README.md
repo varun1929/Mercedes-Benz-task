@@ -2,8 +2,8 @@
 
 This repository is the automation work for Mercedes-Benz task. 
 
-# Test Automation for getting the price list of diesel Hatchhack A class car
-This is a page object model framework I designed using selenium to automate.
+# Validate A Class models price are between £15,000 and £60,000
+This is a page object model framework designed using selenium and java.
 
 ## Usage
 To use this project you will need:
